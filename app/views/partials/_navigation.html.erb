@@ -1,0 +1,68 @@
+
+<!--
+ <header>
+  	<nav class="be-red white large-padding">
+  		<ul class="no-list row center-xs middle-xs">
+  			<li class="col-md">
+			   <%= link_to "Inicio",root_path %>
+  			</li>
+  			<li class="col-md">
+  				<a href="/articles/new">new</a>
+  			</li>
+  			<li class="col-md">
+  				
+          <a href="/articles">Registros</a>
+  			</li>
+        <%if user_signed_in?%>
+        <li class="col-md">
+          <%= link_to "Cerrar sesion",destroy_user_session_path,method: :delete%>
+        </li>
+        <%else%>
+        <li class="col-md">
+          <%= link_to "Iniciar sesion",new_user_session_path%>
+        </li>
+        <li class="col-md">
+          <%= link_to "Crear cuenta",new_user_registration_path%>
+        </li>
+        
+        <% end %>    
+
+  		</ul>
+  	</nav>
+  </header>
+
+  
+  
+          <!-- Navbar -->
+<%if user_signed_in?%>
+  <header>
+      <nav >
+          <div class="w3-bar w3-left-align w3-large" style="background-color: darkcyan;">
+              <a class="w3-bar-item w3-button w3-hide-medium w3-hide-large w3-right w3-padding-large w3-hover-white w3-large w3-theme-d2" href="javascript:void(0);" onclick="openNav()"><i class="fa fa-bars"></i></a>
+              
+              <a href="/welcome/index" class="w3-bar-item w3-button w3-padding-large w3-" style="background-color: black; "><i class="fa fa-home w3-margin-right"></i><font color = "darkcyan" face= "Patua One" >Knowledge Community</font></a>
+              
+              <a href="#" class="w3-bar-item w3-button w3-padding-large" style="color: black" title="Noticias"><i class="fa fa-globe"></i></a>
+              
+              <div class="w3-dropdown-hover w3-hide-small">
+                  <button class="w3-button w3-padding-large " title="Notificaciones"><i class="fa fa-bell"></i><span class="w3-badge w3-right w3-small w3-green">3</span></button>
+                  <div class="w3-dropdown-content w3-card-4 w3-bar-block" style="width:300px">
+                  
+                      <a href="#" class="w3-bar-item w3-button">Brayan Garzon ha publicado una oferta</a>
+                      <a href="#" class="w3-bar-item w3-button">David Gantiva ha publicado una solicitud</a>
+                      <a href="#" class="w3-bar-item w3-button">A Diego Duarte le interasa tu publicación</a>
+                  </div>
+              </div>
+
+              <div class="w3-dropdown-hover w3-hide-small w3-right">
+                  <button class="w3-button w3-padding-large " title="User"><img src="/images/avatar3.png" class="w3-circle" style="height:26;width:26px" alt="Avatar"></button>
+                  <div class="w3-dropdown-content w3-card-4 w3-bar-block" style="width:300px">
+                  
+                      <div><%= link_to "Salir",destroy_user_session_path,method: :delete%></div>
+                  </div>
+              </div>
+
+          </div>
+      </nav>        
+   </header>
+<% end %>

@@ -1,0 +1,25 @@
+
+<div class="w3-center w3-container">
+
+		<p>Titulo: <%= @article.title%></p>
+		<p>Cuerpo: <%= @article.body%></p> 
+
+		<p class="w3-opacity">
+			Estrito por <%= @article.user.email %>
+		</p>
+		<div>
+			<h3>Comentarios</h3>
+				<%= render 'comments/form'%>
+				<ul id="comments-box">
+				<li>
+					<% @article.comments.each do |comments|%>
+						<%= comments.body %> - <%= comments.user.email %>
+						<br>
+					<%end%>	
+				</li>
+				</ul>	
+		</div>
+		<div><%= link_to "Editar", edit_article_path(@article)%></div> 
+
+</div>
+

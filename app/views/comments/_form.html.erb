@@ -1,0 +1,26 @@
+
+
+
+<div class="w3-container">
+  <%= form_for([@article, @comment]) do |f| %>
+    <% if @comment.errors.any? %>
+      <div id="error_explanation">
+        <h2><%= pluralize(comment.errors.count, "error") %> prohibited this comment from being saved:</h2>
+
+        <ul>
+        <% comment.errors.full_messages.each do |message| %>
+          <li><%= message %></li>
+        <% end %>
+        </ul>
+      </div>
+    <% end %>
+
+    <div class="field">
+      <%= f.text_area :body, id: :comment_body, placeholder:"body" %>
+    </div>
+
+    <div class="actions">
+      <%= f.submit:"Guardar comentario", class: "w3-btn w3-red"%>
+    </div>
+  <% end %>
+</div>

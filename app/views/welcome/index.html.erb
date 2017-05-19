@@ -1,0 +1,159 @@
+<body class="w3-theme-l5">
+
+
+
+
+    <!-- Page Container -->
+    <div class="w3-container w3-content" style="background-color: darkgray; max-width:1400px;">
+        <!-- The Grid -->
+        <div class="w3-row">
+            <!-- Left Column -->
+            <div class="w3-col m3">
+                <!-- Profile -->
+                <div class="w3-card-2 w3-round w3-white" >
+                    <div class="w3-container" style="margin-top: 10px;margin-bottom: 10px"">
+                        <% if current_user != nil%>
+                            <h4 class="w3-center"><%= current_user.email%></h4>
+                            <%else %>
+                            <h4 class="w3-center">Mi Perfil</h4>
+                            <%end %>
+
+
+
+                        <p class="w3-center"><img src="/images/avatar3.png" class="w3-circle" style="height:106px;width:106px" alt="Avatar"></p>
+                        <hr>
+                        <p><i class="fa fa-pencil fa-fw w3-margin-right w3-text-theme"></i> Estudiante, Ingneniera de Sistemas</p>
+                        <p><i class="fa fa-home fa-fw w3-margin-right w3-text-theme"></i> Bogota, CO</p>
+
+                    </div>
+                </div>
+                
+
+                <!-- Accordion -->
+                <div class="w3-card-2 w3-round" style="background-color: black;margin-bottom: 10px">
+                    <div class="w3-black">
+                            <button onclick="myFunction('Demo1')" class="w3-button w3-block w3-theme-l1 w3-left-align"><i class="fa fa-circle-o-notch fa-fw w3-margin-right"></i> Mis Grupos</button>
+                            <div id="Demo1" class="w3-hide w3-black w3-container">
+                                <p>Informacion de los grupos</p>
+                            </div>
+                            <button onclick="myFunction('Demo2')" class="w3-button w3-block w3-theme-l1 w3-left-align"><i class="fa fa-calendar-check-o fa-fw w3-margin-right"></i> Mis Eventos</button>
+                            <div id="Demo2" class="w3-hide w3-black w3-container">
+                                <p>Informacion de los eventos</p>
+                            </div>
+
+                    </div>
+                </div>
+                
+
+                <!-- Interests -->
+                <div class="w3-card-2 w3-round w3-white w3-hide-small">
+                    <div class="w3-container">
+                        <p>Intereses</p>
+                        <p>
+                            <span class="w3-tag w3-small w3-theme-d5">Calculo</span>
+                            <span class="w3-tag w3-small w3-theme-d2">Musica</span>
+                            <span class="w3-tag w3-small w3-theme-l2">Deportes</span>
+                            <span class="w3-tag w3-small w3-theme-l3">Fisica</span>
+                            <span class="w3-tag w3-small w3-theme-l4">Quimica</span>
+                        </p>
+                    </div>
+                </div>
+                <br>
+
+
+
+                <!-- End Left Column -->
+            </div>
+
+            <!-- Middle Column -->
+            <div class="w3-col m7" style="margin-top: 10px">
+
+
+
+                <%=render "/articles/form"%>
+
+
+                <!-- AQUI VA EL CENTRO DE ESA MIERDA DE MIERDA -->
+                 
+                <%= render "/articles/articles/" %>
+
+
+
+
+                <!-- End Middle Column -->
+            </div>
+
+
+            <!-- Right Column -->
+            <div class="w3-col m2">
+                <div class="w3-card-2 w3-round w3-white" style="margin-bottom: 10px;margin-top: 10px" >
+                    <div class="w3-container">
+                        <p>Proximos Eventos</p>
+                        <p><strong>Clase de Guitarra</strong></p>
+                        <p>Viernes 15:00</p>
+                        <p><button class="w3-button w3-block w3-theme-l4">Informacion</button></p>
+                    </div>
+                </div>
+
+                <!-- Ryby on rails -->
+                <%
+                    i=0
+                    n=0
+
+                    until i>n
+                        i+=1
+                    
+                %>
+
+                <div class="w3-card-2 w3-round w3-white w3-center w3-padding-20">
+                    <div class="w3-container">
+                        <h4 class="w3-center">Chats</h4>
+                        <img src="/images/avatar3.png" class="w3-circle" style="height:25px;width:25px" alt="Avatar"></a>
+                        <p>Diego duarte</p>
+                        <img src="/images/avatar2.png" class="w3-circle" style="height:25px;width:25px" alt="Avatar"></a>
+                        <p>Sergio ayala</p>
+                    </div>
+                </div>
+            <%end%>
+        
+            <!-- Ryby on rails -->
+
+            </div>
+
+            <!-- End Right Column -->
+        </div>
+
+        <!-- End Grid -->
+    </div>
+
+    <!-- End Page Container -->
+    </div>
+
+    <!-- Footer -->
+
+    <script>
+        // Accordion
+        function myFunction(id) {
+            var x = document.getElementById(id);
+            if (x.className.indexOf("w3-show") == -1) {
+                x.className += " w3-show";
+                x.previousElementSibling.className += " w3-theme-d1";
+            } else {
+                x.className = x.className.replace("w3-show", "");
+                x.previousElementSibling.className =
+                    x.previousElementSibling.className.replace(" w3-theme-d1", "");
+            }
+        }
+
+        // Used to toggle the menu on smaller screens when clicking on the menu button
+        function openNav() {
+            var x = document.getElementById("navDemo");
+            if (x.className.indexOf("w3-show") == -1) {
+                x.className += " w3-show";
+            } else {
+                x.className = x.className.replace(" w3-show", "");
+            }
+        }
+    </script>
+
+</body>

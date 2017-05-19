@@ -1,0 +1,39 @@
+
+html,body{
+	font-family: 'Roboto', sans-serif;
+	margin:0px;
+}
+a:visited{
+	color: inherit;
+}
+a:-webkit-any-link{
+	text-decoration: none;
+}
+
+
+.be-red{
+	background-color: rgb(200,50,50);
+}
+.white{
+	color:wite;
+
+}
+.large-padding{
+	padding: 10px 5px;
+}
+li{
+	list-style-type: none;
+}
+.text_area{
+	width: 100%;
+  	height: 100%;
+
+}
+.text_field{
+	width: 100%;
+  	
+
+}
+.field{
+	margin-top: 1px;
+}
