@@ -1,0 +1,85 @@
+
+<!-- Inicio knowledge Kommunity -->
+
+
+<body class="w3-theme-l5">
+    
+    <div class="w3-center w3-container w3-teal">
+          <br>
+          <h1>Knowledge Community</h1>
+          <br>
+    </div>
+    <!-- Iniciar sesion -->
+    <div class="w3-row">
+      <div class="w3-half w3-black w3-container w3-center" style="height:900px">
+        <div class="w3-padding-60 w3-center">
+          <br>
+          <h1>Iniciar Session</h1>
+          <img src="/images/avatar2.png" class="w3-margin w3-circle" alt="Person" style="width:30%">
+        </div>
+
+        <div class="w3-left-align w3-padding-large">
+          <div class="w3-container w3-card-2 w3-padding-32 w3-white">
+              <div>
+                  <div>
+
+            <%= form_for(resource, as: resource_name, url: session_path(resource_name)) do |f| %>
+              <div class="w3-section">
+                <%= f.label :email %><br />
+                <%= f.email_field :email, autofocus: true,class: "w3-input" %>
+            </div>
+
+            <div class="w3-section">
+              <%= f.label :password %><br />
+              <%= f.password_field :password, autocomplete: "off",class: "w3-input" %>
+            </div>
+
+            <% if devise_mapping.rememberable? -%>
+              <div class="w3-section">
+                <%= f.check_box :remember_me %>
+                <%= f.label :remember_me %>
+              </div>
+            <% end -%>
+
+            <div class="actions">
+              <%= f.submit "Iniciar sesion", class: "w3-button w3-teal w3-right" %>
+            </div>
+          <% end %>
+
+          <% render "devise/shared/links" %>
+                      
+                  </div>
+
+              </div>  
+          </div>
+        </div>
+      </div>
+      
+    <!-- Registrarse -->
+      <div class="w3-half w3-blue-grey w3-container w3-center" style="height:900px">
+        <div class="w3-padding-60 w3-center">
+          <br>
+          <h1>Registrarse</h1>
+
+          <img src="/images/avatar3.png" class="w3-margin w3-circle" alt="Person" style="width:30%">
+          <div class="w3-left-align w3-padding-large">
+              
+          <div class="w3-container w3-card-2 w3-padding-32 w3-white">
+              
+              <div class="w3-container w3-card-2 w3-padding-32 w3-white" >
+
+
+                  <%=render "devise/registrations/new"%>
+
+                
+                
+              </div>
+          </div>
+        </div>
+   </div>
+ </div>
+
+
+
+
+

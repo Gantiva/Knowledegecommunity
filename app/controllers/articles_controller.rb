@@ -8,7 +8,7 @@ class ArticlesController < ApplicationController
 	#con @ se accede en la vista tambien sin @ se queda solo en el articuloa
 	def index
 		@articles = Article.all
-		
+
 	end
 
 	def show
@@ -39,9 +39,9 @@ class ArticlesController < ApplicationController
 	end
 
 	def edit
-
 		#@article=Article.find(params[:id])
 
+		
 	end
 
 	def new

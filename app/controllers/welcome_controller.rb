@@ -7,7 +7,7 @@ class WelcomeController < ApplicationController
   def login
   	
   end
-
+  
   def new
     @comment = Comment.new
   end

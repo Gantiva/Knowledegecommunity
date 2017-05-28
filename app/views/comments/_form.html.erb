@@ -16,11 +16,12 @@
     <% end %>
 
     <div class="field">
-      <%= f.text_area :body, id: :comment_body, placeholder:"body" %>
+      <%= f.text_area :body, id: :comment_body, placeholder:"body",class: 'text_area' %>
     </div>
 
     <div class="actions">
-      <%= f.submit:"Guardar comentario", class: "w3-btn w3-red"%>
+      <%= f.submit:"Guardar comentario", class: "w3-btn w3-padding-large w3-teal"%>
+      <a href="/welcome/index" class="w3-bar-item w3-button w3-padding-large w3-center" style="background-color: black; "><font color = "darkcyan" face= "Patua One" >Regresar al inicio</font></a>
     </div>
   <% end %>
 </div>

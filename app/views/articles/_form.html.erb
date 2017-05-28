@@ -14,13 +14,13 @@
 							* <%=message%>
 						</div>
 					<% end %>
-					<h1>Crear un pecheo</h1><br>
+					<h1>Crear una publicacion</h1><br>
 					<div class="field w3-container">
 						<%= f.text_field:title,placeholder:"Publica lo que estas necesitando", class: "w3-border w3-padding text_field"%>	
 					</div>
 
 					<div class="field w3-container ">
-						<%= f.text_area:body,placeholder:"Escribe una descripcion mas especifica", class: "w3-border w3-padding text_area" %>	
+						<%= f.text_area:body,placeholder:"Escribe una descripcion mas especifica", class: "w3-border w3-padding text_area_home" %>	
 					</div>
 					<div class="field">
 						<%=f.submit:"Guardar",class: "w3-button w3-black w3-theme"%>

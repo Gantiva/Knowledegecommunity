@@ -6,7 +6,7 @@ class Article < ApplicationRecord
 	belongs_to :user
 	has_many :comments
 	before_create :set_visit_count
-	validates :title, presence:true, uniqueness:true
+	validates :title, presence:true
 	validates :body, presence:true, length: { minimum: 5 } 
 
 	def update_visits_count

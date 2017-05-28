@@ -1,13 +1,15 @@
 
 <div class="w3-center w3-container">
-
-		<p>Titulo: <%= @article.title%></p>
-		<p>Cuerpo: <%= @article.body%></p> 
+	<br>
+		<h1>Titulo del articulo: <%= @article.title%></h1>
+		<br>
+		<h2>Cuerpo: <%= @article.body%></h2> 
 
 		<p class="w3-opacity">
-			Estrito por <%= @article.user.email %>
+			Estrito por <%= @article.user.email %><br>
+			Estrito por <%= @article.user.name %>
 		</p>
-		<div>
+		<br>
 			<h3>Comentarios</h3>
 				<%= render 'comments/form'%>
 				<ul id="comments-box">
@@ -19,7 +21,5 @@
 				</li>
 				</ul>	
 		</div>
-		<div><%= link_to "Editar", edit_article_path(@article)%></div> 
-
 </div>
 
