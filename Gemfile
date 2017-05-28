@@ -1,18 +1,15 @@
 source 'https://rubygems.org'
 
-
-#si esta funciono
 git_source(:github) do |repo_name|
   repo_name = "#{repo_name}/#{repo_name}" unless repo_name.include?("/")
   "https://github.com/#{repo_name}.git"
 end
 
-#bundle install mysql por que es la putisima ley :v
-gem "mysql2"
+
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
 gem 'rails', '~> 5.1.0'
 # Use sqlite3 as the database for Active Record
-gem 'pg'
+gem 'sqlite3'
 # Use Puma as the app server
 gem 'puma', '~> 3.7'
 # Use SCSS for stylesheets
@@ -22,21 +19,10 @@ gem 'uglifier', '>= 1.3.0'
 # See https://github.com/rails/execjs#readme for more supported runtimes
 # gem 'therubyracer', platforms: :ruby
 
-#devise gem para el manejo de los usuarios
-gem 'devise', git: 'https://github.com/gogovan/devise.git', branch: 'rails-5.1'
-gem 'erubis'
-
-#paperclip es para subir archivos a esta mierda
-gem "paperclip", "~> 5.0.0"
-
 # Use CoffeeScript for .coffee assets and views
 gem 'coffee-rails', '~> 4.2'
 # Turbolinks makes navigating your web application faster. Read more: https://github.com/turbolinks/turbolinks
-#turbolinks para el manejo de ajax con jquery
-gem "jquery-turbolinks"
-gem 'turbolinks', '~> 5.0.0'
-gem "jquery-rails"
-
+gem 'turbolinks', '~> 5'
 # Build JSON APIs with ease. Read more: https://github.com/rails/jbuilder
 gem 'jbuilder', '~> 2.5'
 # Use Redis adapter to run Action Cable in production
